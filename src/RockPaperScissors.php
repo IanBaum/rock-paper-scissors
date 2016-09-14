@@ -4,7 +4,10 @@
       public $winningAttack;
 
       function playGame($first_input, $second_input){
-        if($first_input === $second_input){
+        if($first_input === Null && $second_input === Null){
+          return Null;
+        }
+        else if($first_input === $second_input){
           return "Draw";
         }
 
