@@ -13,6 +13,7 @@ label > input:checked + p {
   border:2px solid #f00;
 }
 
-.page-header {
-
+img{
+  height:auto;
+  width:300px;
 }

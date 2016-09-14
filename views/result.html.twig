@@ -24,6 +24,16 @@
       {% if result.playGame(player1, player2) == Null %}
         <h3>Hey dum-dums! You both need to select an attack!!!!!!</h3>
       {% endif %}
+
+      {% if result.winningAttack == "rock" %}
+      <img src="img/Rock_Lobster.png" alt="rock">
+      {% elseif result.winningAttack == "paper" %}
+      <img src="img/paper.jpg" alt="paper">
+      {% elseif result.winningAttack == "scissors" %}
+      <img src="img/scissors.jpg" alt="scissors">
+      {% else %}
+        <p>HOW DID I GET HERE!?</p>
+      {% endif %}
       <form action="/">
       <button type="submit" class="btn btn-success btn-lg">Play again?</button>
       </form>
