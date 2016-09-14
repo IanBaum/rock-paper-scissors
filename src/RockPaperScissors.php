@@ -2,6 +2,7 @@
     class RockPaperScissors{
 
       public $winningAttack;
+      public $computerHand;
 
       function playGame($first_input, $second_input){
         if($first_input === Null && $second_input === Null){
@@ -37,10 +38,18 @@
         }
       }
 
-      // function checkWinner(){
-      //   if($this->winningAttack === "rock"){
-      //     return "rock"
-      //   }
-      // }
+      function computerAI() {
+        $computerchoice = rand(1,3);
+        $computerHand;
+        if($computerchoice <= 1){
+          $this->computerHand = "rock";
+        }
+        if($computerchoice <= 2 && $computerchoice > 1){
+          $this->computerHand = "paper";
+        }
+        if($computerchoice <= 3 && $computerchoice > 2){
+          $this->computerHand = "scissors";
+        }
+      }
     }
 ?>
