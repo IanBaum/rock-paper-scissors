@@ -9,9 +9,24 @@
 
   <body>
     <div class="container">
-      <h1>Rock-Paper-Scissors Game</h1>
-
-        <h3>{{ result.playGame(player1, player2) }}</h3>
+      <div class="page-header">
+        <h1>Rock-Paper-Scissors Game</h1>
+      </div>
+      {% if result.playGame(player1, player2) == "Draw" %}
+        <h3>It's a draw!!!</h3>
+      {% endif %}
+      {% if result.playGame(player1, player2) == "Player 1" %}
+        <h3>Player One Won!!!</h3>
+      {% endif %}
+      {% if result.playGame(player1, player2) == "Player 2" %}
+        <h3>Player Two Twon!!!</h3>
+      {% endif %}
+      {% if result.playGame(player1, player2) == Null %}
+        <h3>Hey dum-dums! You both need to select an attack!!!!!!</h3>
+      {% endif %}
+      <form action="/">
+      <button type="submit" class="btn btn-success btn-lg">Play again?</button>
+      </form>
     </div>
   </body>
 </html>
