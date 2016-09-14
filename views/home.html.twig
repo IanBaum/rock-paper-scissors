@@ -11,32 +11,59 @@
     <div class="container">
       <h1>Rock-Paper-Scissors Game</h1>
 
-      <div class="row">
-        <div class="col-xs-6">
-          <form id="player1">
+      <form action="/result" method="post">
+        <div class="row">
+          <div class="col-xs-6">
             <h4>Player One select your attack below:</h4>
-            <div class="form-group radio-group btn-group" role="group" aria-label="...">
-              <button value="rock" type="radio" class="btn btn-danger btn-lg">Rock</button>
-              <button value="paper" type="radio" class="btn btn-success btn-lg">Paper</button>
-              <button value="scissors" type="radio" class="btn btn-primary btn-lg">Scissors</button>
-            </div>
-          </form>
-        </div>
+            <div class="form-group radio-group">
+              <div class="radio">
+                <label>
+                  <input class="radio" type="radio" name="player_one" value="rock">ROCK
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input class="radio" type="radio" name="player_one" value="paper">PAPER
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input class="radio" type="radio" name="player_one" value="scissors">SCISSORS
+                </label>
+              </div>
+            <!-- <div id="playerOne" class="form-group radio-group btn-group" role="group" aria-label="...">
+              <div value="rock" type="radio" class="btn btn-danger btn-lg">Rock</div>
+              <div value="paper" type="radio" class="btn btn-success btn-lg">Paper</div>
+              <div value="scissors" type="radio" class="btn btn-primary btn-lg">Scissors</div>
+            </div> -->
+          </div>
 
-        <div class="col-xs-6">
-          <form id="player2">
+          <div class="col-xs-6">
             <h4>Player Two select your attack below:</h4>
-            <div class="form-group radio-group btn-group" role="group" aria-label="...">
-              <button value="rock" type="radio" class="btn btn-danger btn-lg">Rock</button>
-              <button value="paper" type="radio" class="btn btn-success btn-lg">Paper</button>
-              <button value="scissors" type="radio" class="btn btn-primary btn-lg">Scissors</button>
+            <div class="radio">
+              <label>
+                <input class="radio" type="radio" name="player_two" value="rock">ROCK
+              </label>
             </div>
-          </form>
+            <div class="radio">
+              <label>
+                <input class="radio" type="radio" name="player_two" value="paper">PAPER
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="radio" type="radio" name="player_two" value="scissors">SCISSORS
+              </label>
+            </div>
+            <!-- <div id="playerTwo" class="form-group radio-group btn-group" role="group" aria-label="...">
+              <div value="rock" type="radio" class="btn btn-danger btn-lg">Rock</div>
+              <div value="paper" type="radio" class="btn btn-success btn-lg">Paper</div>
+              <div value="scissors" type="radio" class="btn btn-primary btn-lg">Scissors</div>
+            </div> -->
+          </div>
         </div>
-      </div>
 
-      <form action="/" method="post">
-        <button type="submit" class="btn btn-warning btn-lg">Play your hands!</button>
+        <button type="submit" name="submit" class="btn btn-warning btn-lg">Play your hands!</button>
       </form>
     </div>
   </body>

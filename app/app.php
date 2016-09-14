@@ -11,7 +11,13 @@
       return $app['twig']->render('home.html.twig');
     });
 
-    $app-
+    $app->post("/result", function() use ($app){
+      $player1 = $_POST['player_one'];
+      $player2 = $_POST['player_two'];
+      $newGame = new RockPaperScissors;
+      $newGame->playGame($player1, $player2);
+      return $app['twig']->render('result.html.twig', array('result'=> $newGame, 'player1'=>$player1, 'player2'=>$player2));
+    });
 
     return $app;
 ?>
